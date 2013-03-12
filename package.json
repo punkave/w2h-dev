@@ -1,0 +1,19 @@
+{
+  "name": "w2h-dev",
+  "private": true,
+  "version": "0.0.0",
+  "description": "w2h-dev task",
+  "bin": {
+    "w2h-dev": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "author": "Matt McManus",
+  "license": "MIT",
+  "dependencies": {
+    "optimist": "~0.3.5",
+    "executive": "~0.1.10"
+  }
+}
