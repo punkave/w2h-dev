@@ -3,7 +3,7 @@
 // w2h-dev --full --staging
 
 var argv = require('optimist')
-    .usage('Usage: $0 --full --staging')
+    .usage('Usage: $0 --full --staging --subl')
     .argv;
 
 var exec = require('executive'),
@@ -29,9 +29,14 @@ commands.push("./symfony project:permissions -q");
 commands.push("./symfony cc -q");
 commands.push("./symfony w2h:reset-test-data");
 
+if (argv.subl) {
+  commands.push("subl .");
+}
 
 exec(commands, function(err, out, code) {
-    console.log(err);
-    console.log(out);
-    console.log(code);
+    if (err) {
+      console.log('ERROR:', err);
+    }
+
+    console.log("FINISHED with exit status "+code);
 });

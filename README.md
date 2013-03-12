@@ -14,6 +14,7 @@ SVN update the study site, the w2h plugin and w2h overrides plugin. Sync data fr
 
 * `--full`: Do a full `svn up`
 * `--staging`: Sync data from staging instead of prod
+* `--subl`: Open the directory in Sublime Text
 
 ## To Install
 
